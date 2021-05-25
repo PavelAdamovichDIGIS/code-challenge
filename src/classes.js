@@ -1,6 +1,12 @@
 class Color {
-	constructor(name) {
-		this.name = name
+	constructor(name, hex, rgb) {
+		this.name = name;
+		this.hex = hex;
+		this.rgb = rgb;
+	}
+
+	toString() {
+		return `Color name: ${this.name}; HEX code: ${this.hex}; RGB value: ${this.rgb.r}, ${this.rgb.g}, ${this.rgb.b}`
 	}
 }
 
@@ -22,4 +28,4 @@ class Red extends Color {
   }
 }
 
-module.exports = { Green, Blue, Red };
+module.exports = { Color, Green, Blue, Red };
